@@ -17,7 +17,7 @@
   --nav-hover-color: #ffffff;
   --nav-mobile-background-color: #ffffff;
   --nav-dropdown-background-color: #ffffff;
-  --nav-dropdown-color: #212529;
+  /* --nav-dropdown-color: #212529; */
   --nav-dropdown-hover-color: #0078ff;
 }
 .light-background {
@@ -520,7 +520,7 @@ h6 {
   opacity: 0;
   right: 15px;
   bottom: -15px;
-  z-index: 99999;
+  z-index: 99;
   background-color: var(--accent-color);
   width: 44px;
   height: 44px;
@@ -662,6 +662,7 @@ section,
 
 .hero img {
   position: absolute;
+  object-position: 0 30%;
   inset: 0;
   display: block;
   width: 100%;
@@ -672,7 +673,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 30%);
+  background: color-mix(in srgb, var(--background-color), transparent 20%);
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -706,6 +707,16 @@ section,
 
   .hero p {
     font-size: 20px;
+  }
+}
+@media (max-width: 700px) {
+  .hero img {
+    object-position: 0px 1px;
+  }
+}
+@media (max-width: 780px) {
+  .hero img {
+    object-position: 0px 1px;
   }
 }
 
